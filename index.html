@@ -72,22 +72,47 @@
 
         .bismillah { font-family: 'Noto Serif Display', serif; font-size: 1.3rem; color: var(--gold-dark); margin-bottom: 25px; font-weight: 400; }
         .names { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: var(--national-blue); margin: 20px 0; }
-        .date-box { display: inline-flex; align-items: center; border-top: 3px solid var(--gold-main); border-bottom: 3px solid var(--gold-main); padding: 15px 40px; margin: 30px 0; font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; letter-spacing: 5px; }
+        .date-box { display: inline-flex; align-items: center; border-top: 3px solid var(--gold-main); border-bottom: 3px solid var(--gold-main); padding: 15px 40px; margin: 20px 0; font-family: 'Cinzel Decorative', serif; font-size: 1.8rem; letter-spacing: 3px; font-weight: bold; }
 
-        .btn { display: inline-block; width: 85%; max-width: 350px; margin: 15px auto; padding: 18px; text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; border-radius: 50px; transition: 0.4s; font-family: 'Montserrat', sans-serif; }
+        .time-info { margin: 20px 0; line-height: 1.8; }
+        .time-label { color: #555; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 600; }
+        .time-value { color: var(--gold-dark); font-weight: bold; font-size: 1.2rem; display: block; margin-bottom: 10px; }
+
+        /* AYLANA DIGAN OSH RASMI */
+        .osh-icon { 
+            width: 120px; height: 120px; 
+            border-radius: 50%; 
+            border: 3px solid var(--gold-main); 
+            margin: 20px auto; 
+            object-fit: cover; 
+            display: block; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            
+            /* Animatsiya bog'landi: ism | vaqt | tur | takrorlanish */
+            animation: rotateOsh 15s linear infinite; 
+        }
+
+        .btn { display: inline-block; width: 85%; max-width: 350px; margin: 15px auto; padding: 18px; text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-radius: 50px; transition: 0.4s; font-family: 'Montserrat', sans-serif; }
         .btn-main { background: linear-gradient(45deg, var(--gold-main), var(--gold-dark)); color: white; border: none; box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); }
         .btn-outline { background: white; color: var(--national-blue); border: 2px solid var(--national-blue); }
 
         .timer-container { margin: 60px 0; }
-        .timer-grid { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
-        .t-item { background: white; color: var(--national-blue); padding: 25px 15px; min-width: 90px; border-radius: 10px; border: 2px solid var(--gold-light); }
-        .t-item span { display: block; font-size: 2.5rem; font-weight: bold; font-family: 'Cinzel Decorative', serif; color: var(--gold-dark); }
-        .t-item small { color: #888; letter-spacing: 2px; text-transform: uppercase; font-size: 0.7rem; }
+        .timer-grid { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+        .t-item { background: white; color: var(--national-blue); padding: 20px 10px; min-width: 80px; border-radius: 10px; border: 2px solid var(--gold-light); }
+        .t-item span { display: block; font-size: 2rem; font-weight: bold; font-family: 'Cinzel Decorative', serif; color: var(--gold-dark); }
+        .t-item small { color: #888; letter-spacing: 1px; text-transform: uppercase; font-size: 0.65rem; }
 
-        .res-img { width: 100%; max-width: 480px; border-radius: 5px; border: 8px solid white; box-shadow: 0 15px 50px rgba(0,0,0,0.1); margin-bottom: 30px; transition: 0.5s; }
-        .res-img:hover { transform: scale(1.02) rotate(1deg); }
+        .res-img { width: 100%; max-width: 480px; border-radius: 5px; border: 8px solid white; box-shadow: 0 15px 50px rgba(0,0,0,0.1); margin-bottom: 30px; }
 
+        /* ANIMATSIYALAR */
         @keyframes slowPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        
+        /* Oshni aylantirish animatsiyasi */
+        @keyframes rotateOsh {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         [data-aos="gold-weave"] { transform: translateY(30px) scale(0.95); opacity: 0; transition-property: transform, opacity; }
         [data-aos="gold-weave"].aos-animate { transform: translateY(0) scale(1); opacity: 1; }
     </style>
@@ -111,21 +136,31 @@
                 <div class="card-border"></div>
                 <div id="bismillah" class="bismillah">Bismillahir Rohmanir Rohim</div>
                 <p id="sub-text" style="letter-spacing: 5px; color: #888; font-size: 0.8rem; text-transform: uppercase;">SIZNI TAKLIF ETAMIZ</p>
-                <h1 class="names" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000">Layli & Majnun</h1>
-                <div class="date-box" data-aos="fade-up" data-aos-delay="800">27 . 12 . 2026</div>
-                <p id="time-text" style="color: var(--gold-dark); font-weight: 600; font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="1000">SOAT 18:00 DA</p>
-                <div id="inv-text" style="font-style: italic; line-height: 2; color: #444; margin: 35px 0; padding: 0 15px; font-size: 1.05rem;" data-aos="fade-up" data-aos-delay="1200">
-                    "Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo'y bo'lib, dasturxonimiz uzra kutib qolamiz."
+                <h1 class="names" data-aos="zoom-in" data-aos-delay="500">Layli & Majnun</h1>
+                
+                <img src="restaurant-icon.jpg" class="osh-icon" alt="Palov">
+
+                <div class="date-box" data-aos="fade-up" data-aos-delay="800">27-DEKABR, 2026</div>
+                
+                <div class="time-info" data-aos="fade-up" data-aos-delay="1000">
+                    <div id="nahor-label" class="time-label">NAHOR OSHI:</div>
+                    <div class="time-value">07:00 – 09:00</div>
+                    <div id="tantana-label" class="time-label">TANTANA:</div>
+                    <div class="time-value">18:00 DA</div>
                 </div>
-                <button onclick="downloadICS()" class="btn btn-outline" id="save-btn" data-aos="zoom-in" data-aos-delay="1400">KALENDARGA SAQLASH</button>
+
+                <div id="inv-text" style="font-style: italic; line-height: 2; color: #444; margin: 30px 0; padding: 0 15px; font-size: 0.95rem;">
+                    "Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo'y bo'lib kutib qolamiz."
+                </div>
+                <button onclick="downloadICS()" class="btn btn-outline" id="save-btn">KALENDARGA SAQLASH</button>
             </div>
 
-            <div class="premium-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="premium-card" data-aos="fade-up">
                 <div class="card-border"></div>
                 <img src="restoran.png" class="res-img" alt="Ideal SS">
-                <h3 id="rest-name" style="color: var(--national-blue); font-family: 'Noto Serif Display', serif; font-size: 1.4rem;">"IDEAL SS" TANTANALAR SAROYI</h3>
+                <h3 id="rest-name" style="color: var(--national-blue); font-family: 'Noto Serif Display', serif;">"IDEAL SS" TANTANALAR SAROYI</h3>
                 <p style="color: #888; margin-bottom: 30px;">Surxondaryo viloyati, Sho'rchi tumani</p>
-                <a href="https://maps.app.goo.gl/zS5NfLss1EdNRqXr6" target="_blank" class="btn btn-main">GOOGLE XARITA</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-main">GOOGLE XARITA</a>
                 <a href="https://yandex.uz/maps" target="_blank" class="btn btn-outline">YANDEX XARITA</a>
             </div>
 
@@ -150,12 +185,14 @@
         const translations = {
             uz: {
                 tap: "LUTFAN OCHING", bismillah: "Bismillahir Rohmanir Rohim", sub: "SIZNI TAKLIF ETAMIZ", 
-                time: "SOAT 18:00 DA", inv: '"Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog\'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo\'y bo\'lib kutib qolamiz."',
+                nahor: "NAHOR OSHI:", tantana: "TANTANA:", time_suff: "DA",
+                inv: '"Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog\'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo\'y bo\'lib kutib qolamiz."',
                 save: "KALENDARGA SAQLASH", timer: "TO'YGACHA QOLDI:", d: "Kun", h: "Soat", m: "Min", footer: "Sizni kutib qolamiz!"
             },
             cyrillic: {
                 tap: "ЛУТФАН ОЧИНГ", bismillah: "Бисмиллаҳир Роҳманир Роҳийм", sub: "СИЗНИ ТАКЛИФ ЭТАМИЗ", 
-                time: "СОАТ 18:00 ДА", inv: '"Аллоҳ таоло қалбимизга солган муҳаббат риштасини никоҳ билан боғлашга аҳд қилдик. Қувончли кунимизда сиз азизларни дуогўй бўлиб кутиб қоламиз."',
+                nahor: "НАҲОР ОШИ:", tantana: "ТАНТАНА:", time_suff: "ДА",
+                inv: '"Аллоҳ таоло қалбимизга солган муҳаббат риштасини никоҳ билан боғлашга аҳд қилдик. Қувончли кунимизда сиз азизларни дуогўй бўлиб кутиб қоламиз."',
                 save: "КАЛЕНДАРГА САҚЛАШ", timer: "ТЎЙГАЧА ҚОЛДИ:", d: "Кун", h: "Соат", m: "Мин", footer: "СИЗНИ КУТИБ ҚОЛАМИЗ!"
             }
         };
@@ -167,7 +204,8 @@
             document.getElementById('tap-text').innerText = t.tap;
             document.getElementById('bismillah').innerText = t.bismillah;
             document.getElementById('sub-text').innerText = t.sub;
-            document.getElementById('time-text').innerText = t.time;
+            document.getElementById('nahor-label').innerText = t.nahor;
+            document.getElementById('tantana-label').innerText = t.tantana;
             document.getElementById('inv-text').innerText = t.inv;
             document.getElementById('save-btn').innerText = t.save;
             document.getElementById('timer-t').innerText = t.timer;
@@ -186,7 +224,7 @@
         }
 
         function updateTimer() {
-            const target = new Date("December 27, 2026 18:00:00").getTime();
+            const target = new Date("December 27, 2026 07:00:00").getTime();
             const now = new Date().getTime();
             const diff = target - now;
             if (diff > 0) {
@@ -197,7 +235,7 @@
         }
 
         function downloadICS() {
-            const icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:Layli & Majnun To'y Marosimi\nDTSTART:20261227T130000Z\nDTEND:20261227T180000Z\nLOCATION:Ideal SS Tantanalari Saroyi\nEND:VEVENT\nEND:VCALENDAR";
+            const icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:Nahor Oshi - Layli & Majnun\nDTSTART:20261227T020000Z\nDTEND:20261227T040000Z\nLOCATION:Ideal SS Tantanalari Saroyi\nEND:VEVENT\nBEGIN:VEVENT\nSUMMARY:Tantana - Layli & Majnun\nDTSTART:20261227T130000Z\nDTEND:20261227T180000Z\nLOCATION:Ideal SS Tantanalari Saroyi\nEND:VEVENT\nEND:VCALENDAR";
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
