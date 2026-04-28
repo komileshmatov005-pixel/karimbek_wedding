@@ -84,7 +84,8 @@
         .t-item span { display: block; font-size: 2.5rem; font-weight: bold; font-family: 'Cinzel Decorative', serif; color: var(--gold-dark); }
         .t-item small { color: #888; letter-spacing: 2px; text-transform: uppercase; font-size: 0.7rem; }
 
-        .res-img { width: 100%; max-width: 480px; border-radius: 5px; border: 8px solid white; box-shadow: 0 15px 50px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .res-img { width: 100%; max-width: 480px; border-radius: 5px; border: 8px solid white; box-shadow: 0 15px 50px rgba(0,0,0,0.1); margin-bottom: 30px; transition: 0.5s; }
+        .res-img:hover { transform: scale(1.02) rotate(1deg); }
 
         @keyframes slowPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         [data-aos="gold-weave"] { transform: translateY(30px) scale(0.95); opacity: 0; transition-property: transform, opacity; }
@@ -110,21 +111,21 @@
                 <div class="card-border"></div>
                 <div id="bismillah" class="bismillah">Bismillahir Rohmanir Rohim</div>
                 <p id="sub-text" style="letter-spacing: 5px; color: #888; font-size: 0.8rem; text-transform: uppercase;">SIZNI TAKLIF ETAMIZ</p>
-                <h1 class="names" data-aos="zoom-in" data-aos-delay="500">Layli & Majnun</h1>
+                <h1 class="names" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000">Layli & Majnun</h1>
                 <div class="date-box" data-aos="fade-up" data-aos-delay="800">27 . 12 . 2026</div>
                 <p id="time-text" style="color: var(--gold-dark); font-weight: 600; font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="1000">SOAT 18:00 DA</p>
-                <div id="inv-text" style="font-style: italic; line-height: 2; color: #444; margin: 35px 0; padding: 0 15px;">
-                    "Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo'y bo'lib kutib qolamiz."
+                <div id="inv-text" style="font-style: italic; line-height: 2; color: #444; margin: 35px 0; padding: 0 15px; font-size: 1.05rem;" data-aos="fade-up" data-aos-delay="1200">
+                    "Alloh taolo qalbimizga solgan muhabbat rishtasini nikoh bilan bog'lashga ahd qildik. Quvonchli kunimizda siz azizlarni duogo'y bo'lib, dasturxonimiz uzra kutib qolamiz."
                 </div>
-                <button onclick="downloadICS()" class="btn btn-outline" id="save-btn">KALENDARGA SAQLASH</button>
+                <button onclick="downloadICS()" class="btn btn-outline" id="save-btn" data-aos="zoom-in" data-aos-delay="1400">KALENDARGA SAQLASH</button>
             </div>
 
-            <div class="premium-card" data-aos="fade-up">
+            <div class="premium-card" data-aos="fade-up" data-aos-duration="1200">
                 <div class="card-border"></div>
                 <img src="restoran.png" class="res-img" alt="Ideal SS">
-                <h3 id="rest-name" style="color: var(--national-blue); font-family: 'Noto Serif Display', serif;">"IDEAL SS" TANTANALAR SAROYI</h3>
+                <h3 id="rest-name" style="color: var(--national-blue); font-family: 'Noto Serif Display', serif; font-size: 1.4rem;">"IDEAL SS" TANTANALAR SAROYI</h3>
                 <p style="color: #888; margin-bottom: 30px;">Surxondaryo viloyati, Sho'rchi tumani</p>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-main">GOOGLE XARITA</a>
+                <a href="https://maps.app.goo.gl/zS5NfLss1EdNRqXr6" target="_blank" class="btn btn-main">GOOGLE XARITA</a>
                 <a href="https://yandex.uz/maps" target="_blank" class="btn btn-outline">YANDEX XARITA</a>
             </div>
 
@@ -138,6 +139,7 @@
             </div>
 
             <p id="footer-t" style="font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--gold-dark); margin-top: 80px;" data-aos="fade-up">Sizni kutib qolamiz!</p>
+            <img src="pattern_footer.png" width="150" style="opacity: 0.3; margin-top: 20px;" data-aos="fade-in"> 
         </div>
     </div>
 
